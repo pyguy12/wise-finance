@@ -2,6 +2,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const express = require('express');
 const Transaction = require('./models/Transaction');
+const cors = require('cors');
 
 mongoose
     .connect(process.env.MONGODB_URI, {
@@ -12,6 +13,7 @@ mongoose
     .catch((err) => console.error('Could not connect to MongoDB', err));
 
 const app = express();
+app.use(cors());
 const port = 3000;
 
 // Middleware

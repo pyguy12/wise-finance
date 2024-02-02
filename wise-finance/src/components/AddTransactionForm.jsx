@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createTransaction } from './services/api';
+import { createTransaction } from '../services/api';
 
 function AddTransactionForm() {
     const [transactionData, setTransactionData] = useState({
@@ -12,6 +12,7 @@ function AddTransactionForm() {
         e.preventDefault();
         try {
             await createTransaction(transactionData);
+            console.log('Transaction created');
         } catch (error) {
             console.error('Could not create transaction', error);
         }

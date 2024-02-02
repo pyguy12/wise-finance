@@ -1,10 +1,12 @@
 import React from 'react';
+import TransactionList from '../components/TransactionList';
 
 const TransactionsPage = () => {
     return (
         <div>
-            <h1>Transactions Page</h1>
-            <p>This is a placeholder for the Transactions Page component.</p>
+            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <TransactionList />
+            </div>
         </div>
     );
 };

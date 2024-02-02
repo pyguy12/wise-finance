@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-// Import your page components
 import HomePage from './pages/HomePage';
 import TransactionsPage from './pages/TransactionsPage';
+import AddTransactionPage from './pages/AddTransactionPage';
 
 function App() {
     return (
@@ -14,6 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/transactions" element={<TransactionsPage />} />
+                    <Route path="/add-transaction" element={<AddTransactionPage />} />
                     {/* More routes as needed */}
                 </Routes>
             </div>

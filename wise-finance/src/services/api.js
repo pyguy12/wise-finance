@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/transactions';
+const API_URL = 'http://localhost:3000/api/transaction';
 
 export const fetchTransactions = async () => {
     return axios.get(API_URL);
